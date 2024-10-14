@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background:linear-gradient( to right,cyan,pink,violet);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            border: 2px none;
+            backdrop-filter: blur(10px);
+        
+            padding: 30px;
+            width: 300px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            background-color: rgb(255, 0, 247);
+            color: white;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: rgb(214, 25, 199);
+        }
+
+        a {
+            color: rgb(212, 51, 201);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .register-link {
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+    <style>
+        .flashes {
+           list-style-type: none;
+           padding: 0;
+       }
+       
+       .flashes li {
+           margin: 5px 0;
+           padding: 10px;
+           background-color: #f8d7da; /* Light red background */
+           color: #721c24; /* Dark red text */
+           border: 1px solid #f5c6cb; /* Red border */
+       }
+       
+       
+           </style>
+</head>
+<body>
+    <div class="login-container">
+        <form action="/" method="post">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flashes">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}   
+
+            <h1 style="color:rgb(223, 47, 167);">USER LOGIN</h1>
+            <p style="color:rgb(223, 47, 167);">E-mail</p>
+            <input type="text" placeholder="abcd@gmail.com" name="email" required>
+            <p style="color:rgb(223, 47, 167);">Password</p>
+            <input type="password" placeholder="P@ssw0rd" name="password" required><br><br>
+            <button type="submit" value="Login">Login</button>
+            <div class="register-link">
+                <p>Don't have an account? <a href="{{ url_for('register') }}">Register</a></p>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
