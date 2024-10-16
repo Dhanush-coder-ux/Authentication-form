@@ -1,3 +1,10 @@
+
+
+![img alt](https://github.com/Dhanush-coder-ux/Authentication-form/blob/b15f0d2f0237de8699fe7c5ca57c8437220ddbfc/Screenshot%202024-10-16%20154742.png)
+
+
+
+
 # Flask User Authentication System
 
 A simple **Flask** web application that allows users to register and log in securely. The app integrates with a **MySQL** database to store user credentials and utilizes password hashing for secure authentication.
