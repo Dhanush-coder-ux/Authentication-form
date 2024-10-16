@@ -1,3 +1,9 @@
+NAME: DHANUSH KUMAR R
+COMPANY:CODTECH IT SOLUTIONS
+ID:CT08DS8361
+DURATION:SEP20TH TO OCT20TH
+
+
 ![img alt](https://github.com/Dhanush-coder-ux/Authentication-form/blob/b984e9d649d8f1813eec2e3f2583ba081413757f/Screenshot%202024-10-16%20154811.png)
 
 ![img alt](https://github.com/Dhanush-coder-ux/Authentication-form/blob/b15f0d2f0237de8699fe7c5ca57c8437220ddbfc/Screenshot%202024-10-16%20154742.png)
